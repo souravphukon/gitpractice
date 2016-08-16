@@ -1,11 +1,12 @@
+
 package com.example.sborphuk.loginactivity.main;
 
-/**
- * Created by sborphuk on 8/2/2016.
- */
-public interface MainPresenter
-    {
-        void onItemClicked(int position);
-        void onResume();
-        void onDestroy();
-    }
+public interface MainPresenter {
+
+    void onResume();
+
+    void onItemClicked(int position);
+   // void onPush();
+   // void onPull();
+    void onDestroy();
+}

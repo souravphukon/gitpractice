@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 
 import com.example.sborphuk.loginactivity.R;
+import com.example.sborphuk.loginactivity.application.GoogleAnalyticsHelper;
 import com.example.sborphuk.loginactivity.main.MainActivity;
 
 public class LoginActivity extends AppCompatActivity implements LoginView, View.OnClickListener
@@ -27,7 +28,6 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
                 username = (EditText) findViewById(R.id.username);
                 password = (EditText) findViewById(R.id.password);
                 findViewById(R.id.button).setOnClickListener(this);
-
                 loginPresenter=new LoginPresenterImp(this);
             }
 
@@ -64,10 +64,17 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
             }
 
         @Override
-        public void navHomeScreen()
-            {startActivity(new Intent(this,MainActivity.class));
+        protected void onResume()
+            {
+                super.onResume();
+                GoogleAnalyticsHelper.getInstance().trackScreenView(getLocalClassName());
+            }
 
-               // Toast.makeText(this,"next screen",Toast.LENGTH_LONG).show();
+        @Override
+        public void navHomeScreen()
+            {
+                startActivity(new Intent(this, MainActivity.class));
+                finish();
             }
 
         @Override

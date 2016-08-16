@@ -5,6 +5,6 @@ package com.example.sborphuk.loginactivity.login;
  */
 public interface LoginPresenter
     {
-        void validateCredentials(String username ,String password);
+        void validateCredentials(String username, String password);
         void onDestroy();
     }

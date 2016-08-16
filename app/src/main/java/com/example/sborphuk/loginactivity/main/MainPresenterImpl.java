@@ -1,34 +1,60 @@
+
+
 package com.example.sborphuk.loginactivity.main;
 
-/**
- * Created by sborphuk on 8/2/2016.
- */
-public class MainPresenterImpl implements MainPresenter
-    {
-        MainView mainView;
-        public MainPresenterImpl(MainView mainView)
-            {
-            }
+import java.util.List;
 
-        @Override
-        public void onItemClicked(int position)
-            {
+public class MainPresenterImpl implements MainPresenter, FindItemsInteractor.OnFinishedListener {
 
-           if(mainView!=null)
-               {
-                   mainView.showMessage("clicked in position"+position);
-                }
-            }
-
-        @Override
-        public void onResume()
-            {
-
-            }
-
-        @Override
-        public void onDestroy()
-            {
-
-            }
+    private MainView mainView;
+    private FindItemsInteractor findItemsInteractor;
+    List<String> items;
+    public MainPresenterImpl(MainView mainView) {
+        this.mainView = mainView;
+        findItemsInteractor = new FindItemsInteractorImpl();
     }
+
+    @Override
+    public void onResume() {
+        if (mainView != null) {
+            mainView.showProgress();
+        }
+
+        findItemsInteractor.findItems(this);
+    }
+
+    @Override
+    public void onItemClicked(int position) {
+        if (mainView != null) {
+            mainView.showMessage(String.format("Position %d clicked", position + 1));
+        }
+    }
+
+   /* @Override
+    public void onPush()
+        {
+            items.add("Item "+items.size()+1);
+            mainView.setItems(items);
+        }
+
+    @Override
+    public void onPull()
+        {
+            items.remove(0);
+            mainView.setItems(items);
+        }*/
+
+    @Override
+    public void onDestroy() {
+        mainView = null;
+    }
+
+    @Override
+    public void onFinished(List<String> items) {
+        if (mainView != null) {
+            this.items=items;
+            mainView.setItems(items);
+            mainView.hideProgress();
+        }
+    }
+}

@@ -13,6 +13,6 @@ public interface LoginInteractor
 
            }
 
-       void login(String username,String password,OnLoginFinishedListener onLoginFinishedListener);
+       void login(String username, String password, OnLoginFinishedListener onLoginFinishedListener);
 
     }

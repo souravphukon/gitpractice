@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "367029351493",
+    "project_id": "firebase-practice-project"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367029351493:android:cf99f73423bb8dde",
+        "android_client_info": {
+          "package_name": "com.example.sborphuk.loginactivity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzFI4GicWswPF4kWQ4_9B-F1y4UK2N_x4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-68225216-2"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
