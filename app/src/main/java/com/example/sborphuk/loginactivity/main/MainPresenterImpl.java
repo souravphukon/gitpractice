@@ -19,7 +19,6 @@ public class MainPresenterImpl implements MainPresenter, FindItemsInteractor.OnF
         if (mainView != null) {
             mainView.showProgress();
         }
-
         findItemsInteractor.findItems(this);
     }
 

@@ -36,7 +36,6 @@ public class MainActivity extends Activity implements MainView, AdapterView.OnIt
         pop=(Button)findViewById(R.id.pop);
         pop.setOnClickListener(this);
         presenter = new MainPresenterImpl(this);
-
     }
 
     @Override

@@ -34,7 +34,6 @@ public class GoogleAnalyticsHelper
         public void trackScreenView(String screenName)
             {
                 Tracker t = AnalyticsApplication.getApplictaionInstance().getDefaultTracker();
-
                 // Set screen name.
                 t.setScreenName(screenName);
 

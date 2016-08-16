@@ -12,5 +12,4 @@ public interface LoginView
         void usernameError();
         void passwordError();
         void navHomeScreen();
-
     }

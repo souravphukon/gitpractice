@@ -12,7 +12,6 @@ public class AnalyticsExceptionParser implements ExceptionParser
             {
                 String stackTrace = StackTraceToString(throwable);
                 return "Thread: " + thread + ", Exception: " + stackTrace;
-
             }
 
         /**

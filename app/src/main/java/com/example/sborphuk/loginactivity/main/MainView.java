@@ -14,6 +14,5 @@ public interface MainView {
     void showMessage(String message);
 
    // void showPushItem();
-
    // void ShowPopList();
 }

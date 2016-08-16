@@ -42,7 +42,6 @@ public class FindItemsInteractorImpl implements FindItemsInteractor
                 "Item 3",
                 "Item 4",
                 "Item 5"
-
         );
     }
 }

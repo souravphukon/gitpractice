@@ -61,6 +61,7 @@ public final class MyAnalyticsTrackers
                                     GoogleAnalytics analytics = GoogleAnalytics.getInstance(AnalyticsApplication.getApplictaionInstance());
                                     //analytics.newTracker(PROPERTY_ID);
                                     tracker = analytics.newTracker(R.xml.global_tracker);
+
                                     break;
 
                                case APP:

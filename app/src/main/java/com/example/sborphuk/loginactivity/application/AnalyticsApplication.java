@@ -60,6 +60,7 @@ public class AnalyticsApplication extends Application
         synchronized public Tracker getDefaultTracker()
             {
                 return MyAnalyticsTrackers.getInstance().get(MyAnalyticsTrackers.TrackerName.GLOBALTRACKER);
+                ///////////// 
             }
 
         public static Context getAppContext()

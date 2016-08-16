@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
         public void hideProgress()
             {
                 progressBar.setVisibility(View.INVISIBLE);
-
+//////////////////
             }
 
         @Override

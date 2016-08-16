@@ -22,7 +22,6 @@ public class LoginInteractorImpl implements LoginInteractor
                                         onLoginFinishedListener.OnUserNameError();
                                         error = true;
 
-
                                     }
                                 if (TextUtils.isEmpty(password))
                                     {
