@@ -67,6 +67,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
         protected void onResume()
             {
                 super.onResume();
+             //============
                 GoogleAnalyticsHelper.getInstance().trackScreenView(getLocalClassName());
             }
 

@@ -9,7 +9,7 @@ public class LoginPresenterImp implements LoginPresenter,LoginInteractor.OnLogin
         LoginView loginView;
         LoginInteractor loginInteractor;
 
-        LoginPresenterImp(LoginView view)
+        public LoginPresenterImp(LoginView view)
             {
                 loginView = view;
                 loginInteractor=new LoginInteractorImpl();
