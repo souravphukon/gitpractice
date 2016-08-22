@@ -16,6 +16,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
 
       //No data
         //
+
+
         private ProgressBar progressBar;
         private EditText username;
         private EditText password;
