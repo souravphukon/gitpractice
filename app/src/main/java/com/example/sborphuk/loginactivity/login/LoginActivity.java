@@ -14,7 +14,7 @@ import com.example.sborphuk.loginactivity.main.MainActivity;
 public class LoginActivity extends AppCompatActivity implements LoginView, View.OnClickListener
     {
 
-      //testing data
+      //No data
         private ProgressBar progressBar;
         private EditText username;
         private EditText password;
